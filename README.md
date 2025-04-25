@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# Pokémon App
+![Markdown](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive mobile web app built using Vite , React TypeScript , and Chakra UI . The app allows users to browse and view detailed information about Pokémon using data from the [PokéAPI](https://pokeapi.co/?spm=a2ty_o01.29997173.0.0.23c85426Remvpj)
 
-Currently, two official plugins are available:
+## Features
+- Responsive Design : Optimized for mobile, tablet, and desktop.
+- Pokémon Grid : Displays a grid of Pokémon cards with images and names.
+- Detailed View : Click on a Pokémon card to view detailed information such as height, type, and sprite.
+- Search & Filter : Includes a header with options for sorting and filtering (basic implementation).
+- TypeScript : Ensures type safety and better developer experience.
+- Routing : Uses React Router for navigation between pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- Frontend Framework : React with TypeScript
+- CSS Framework : Chakra UI
+- Routing : React Router DOM
+- Build Tool : Vite
+- API : PokéAPI
 
-## Expanding the ESLint configuration
+## Setup Instructions
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username pokemon-app.git 
+cd pokemon-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm run dev
 ```
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open the app in your browser:
+```bash
+http://localhost:[follow local port shows in the command line] ex:5173
+```
+
+## Usage
+- Home Page : Displays a grid of Pokémon cards fetched from the PokéAPI.
+- Details Page : Click on a Pokémon card to view detailed information about the Pokémon.
+- Header : Includes a search icon and dropdown menu for sorting/filtering options.
+
+## Future Enhancements
+- Add infinite scrolling or pagination for large datasets.
+- Implement advanced search and filtering features.
+- Add animations and transitions for a smoother user experience.
+- Integrate unit tests using Jest or React Testing Library.
+- Optimize API calls using caching or state management libraries like Redux or Zustand.
+
+## Acknowledgments
+- [PokéAPI](https://pokeapi.co/?spm=a2ty_o01.29997173.0.0.23c85426Remvpj) : For providing the Pokémon data.
+- [Chakra UI](https://chakra-ui.com/?spm=a2ty_o01.29997173.0.0.23c85426Remvpj) : For the responsive and accessible UI components.
+- [Vite](https://vitejs.dev/?spm=a2ty_o01.29997173.0.0.23c85426Remvpj) : For the fast and modern build tool.  
